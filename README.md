@@ -1,4 +1,4 @@
-# Pascal Coin: P2P Cryptocurrency without need of historical operations.  
+# Venom Coin: P2P Cryptocurrency without need of historical operations.  
   
 Copyright (c) 2016-2018 PascalCoin developers based on original Albert Molina source code
   
@@ -14,23 +14,23 @@ This product includes software developed by the OpenSSL Project and Denis
 Grinyuk (https://github.com/Arvur/OpenSSL-Delphi), and some  
 cryptographic functions inspirated in code written by Ladar Levison and   
 Marco Ferrante.  
-Original source code is written in Pascal Language and is available at   
-https://github.com/PascalCoin/PascalCoin  
+Original source code is written in Venom Language and is available at   
+https://github.com/Oemd
   
   
 ## HOW TO COMPILE:  
   
-See instructions at GitHub Wiki: https://github.com/PascalCoin/PascalCoin/wiki
+See instructions at GitHub Wiki: https://github.com/Venom
   
   
-Enjoy Pascal Coin!
+Enjoy Venom Coin!
   
 ## Donations  
   
-If you like it, consider a donation using BitCoin:
-16K3HCZRhFUtM8GdWRcfKeaa6KsuyxZaYk
+If you like it, consider a donation using Venom:
+1-wk3--50;4;'-[l5[905
 
-Also, consider a donation at PascalCoin development account: "0-10"
+Also, consider a donation at Venom development account: ")_#$%^"
 
 ## History:  
 
@@ -60,11 +60,11 @@ Also, consider a donation at PascalCoin development account: "0-10"
     - "senders" : ARRAY of objects - When is a transaction, this array contains each sender
       - "account" : Sending Account 
       - "n_operation"
-      - "amount" : PASCURRENCY - In negative value, due it's outgoing from "account"
+      - "amount" : VENOMCURRENCY - In negative value, due it's outgoing from "account"
       - "payload" : HEXASTRING
     - "receivers" : ARRAY of objects - When is a transaction, this array contains each receiver
       - "account" : Receiving Account 
-      - "amount" : PASCURRENCY - In positive value, due it's incoming from a sender to "account"
+      - "amount" : VENOMCURRENCY - In positive value, due it's incoming from a sender to "account"
       - "payload" : HEXASTRING
     - "changers" : ARRAY of objects - When accounts changed state
       - "account" : changing Account 
@@ -73,9 +73,9 @@ Also, consider a donation at PascalCoin development account: "0-10"
       - "new_name" : If name is changed
       - "new_type" : If type is changed
       - "seller_account" : If is listed for sale (public or private) will show seller account
-      - "account_price"	: PASCURRENCY - If is listed for sale (public or private) will show account price
+      - "account_price"	: VENOMCURRENCY - If is listed for sale (public or private) will show account price
       - "locked_until_block" : If is listed for private sale will show block locked
-      - "fee" : PASCURRENCY - In negative value, due it's outgoing from "account"
+      - "fee" : VENOMCURRENCY - In negative value, due it's outgoing from "account"
     Modified fields / DEPRECATED FIELDS
     Caused by multioperation introduction, search in "senders"/"receivers"/"changers" instead
     - "balance" will not be included when is not possible to calc previous balance of account searching at the past
@@ -100,8 +100,8 @@ Also, consider a donation at PascalCoin development account: "0-10"
       - "new_enc_pubkey" : If public key is changed
       - "new_name" : If name is changed
       - "new_type" : If type is changed
-    - "amount" : PASCURRENCY Amount received by receivers
-    - "fee" : PASCURRENCY Equal to "total send" - "total received"
+    - "amount" : VENOMCURRENCY Amount received by receivers
+    - "fee" : VENOMCURRENCY Equal to "total send" - "total received"
 	- "signed_count" : Integer with info about how many accounts are signed. Does not check if signature is valid for a multioperation not included in blockchain 
 	- "not_signed_count" : Integer with info about how many accounts are pending to be signed
     - "signed_can_execute"	: Boolean. True if everybody signed. Does not check if MultiOperation is well formed or can be added to Network because is an offline call
@@ -130,11 +130,11 @@ Also, consider a donation at PascalCoin development account: "0-10"
       - "senders" : ARRAY of objects that will be Senders of the multioperation
         - "account" : Integer
         - "n_operation" : Integer (optional) - if not provided, will use current safebox n_operation+1 value (on online wallets)
-        - "amount" : PASCURRENCY in positive format
+        - "amount" : VENOMCURRENCY in positive format
         - "payload" : HEXASTRING
       - "receivers" : ARRAY of objects that will be Receivers of the multioperation
         - "account" : Integer
-        - "amount" : PASCURRENCY in positive format
+        - "amount" : VENOMCURRENCY in positive format
         - "payload" : HEXASTRING
       - "changesinfo" : ARRAY of objects that will be accounts executing a changing info
         - "account" : Integer
@@ -169,8 +169,8 @@ Also, consider a donation at PascalCoin development account: "0-10"
       If success will return a "Raw Operations Object"
       - "rawoperations" : HEXASTRING with operations in Raw format
       - "operations" : Integer
-      - "amount" : PASCURRENCY
-      - "fee" : PASCURRENCY  
+      - "amount" : VENOMCURRENCY
+      - "fee" : VENOMCURRENCY  
   - Updated method "getpendings" : Added params "start" (0..N) default=0 and "max" default=100 (0 = ALL)
     - Also fixed bug #86 : https://github.com/PascalCoin/PascalCoin/issues/86
   - New method "getpendingscount" : Returns pending operations count
@@ -266,7 +266,7 @@ Also, consider a donation at PascalCoin development account: "0-10"
 ### Build 2.0.0.0 - 2017-06-23
 - MANDATORY UPGRADE - HARD FORK ACTIVATION WILL OCCUR ON BLOCK 115000
 - Introducing Protocol v2.
-  - https://github.com/PascalCoin/PascalCoin/blob/master/PascalCoinWhitePaperV2.pdf
+  - https://github.com/VENOMCoinWhitePaperV2.pdf
   - Core Changes:
     - New safebox hash calculation algorithm to allow safebox checkpointing
     - Improved difficulty target calculation to obtain a more stable average blocktime of 5 minutes, given abrupt hashpower fluctuations
